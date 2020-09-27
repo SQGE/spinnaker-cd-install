@@ -11,8 +11,8 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: halyard-nfs
   nfs:
-    path: /data/devops/spinnaker/halyard
-    server: 192.168.1.200
+    path: /data/k8s/spinnaker/halyard
+    server: 10.26.10.76 
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -27,8 +27,8 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: redis-nfs
   nfs:
-    path: /data/devops/spinnaker/redis
-    server: 192.168.1.200
+    path: /data/k8s/spinnaker/redis
+    server: 10.26.10.76
 ---
 kind: PersistentVolume
 apiVersion: v1
@@ -43,5 +43,5 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: minio-nfs
   nfs:
-    path: /data/devops/spinnaker/minio
-    server: 192.168.1.200
+    path: /data/k8s/spinnaker/minio
+    server: 10.26.10.76

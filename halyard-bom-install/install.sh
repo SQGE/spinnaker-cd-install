@@ -7,9 +7,9 @@ BOMS_DIR="/root/.hal/"
 BOMS_FILR=".boms"
 KUBE_DIR="/root/.kube/"
 HALY_IMAGE="gcr.io/spinnaker-marketplace/halyard:1.32.0"
-DECK_HOST="spinnaker.idevops.site"
-GATE_HOST="spin-gate.idevops.site"
-NODES="node01.zy.com node02.zy.com"
+DECK_HOST="spinnaker.testk8s.com"
+GATE_HOST="spin-gate.testk8s.com"
+NODES="10.26.190.99 10.26.190.79 10.26.190.82 10.26.10.76"
 
 ## 下载镜像
 function GetImages(){
@@ -113,7 +113,7 @@ case $1 in
     ;;
   allinstall)
     Clean
-    GetImages
+    #GetImages
     Install
     sleep 10
     Ingress

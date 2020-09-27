@@ -3,7 +3,7 @@
 VERSION="1.19.4"
 S_REGISTRY="gcr.io/spinnaker-marketplace"
 T_REGISTRY="registry.cn-beijing.aliyuncs.com/spinnaker-cd"
-NODES="node01.zy.com node02.zy.com"
+NODES="10.26.190.99 10.26.190.79 10.26.190.82 10.26.10.76"
 
 ## 下载镜像
 function GetImages(){

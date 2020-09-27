@@ -2,7 +2,7 @@
 
 S_REGISTRY="gcr.io/spinnaker-marketplace"
 T_REGISTRY="registry.cn-beijing.aliyuncs.com/spinnaker-cd"
-NODES="node01.zy.com node02.zy.com"
+NODES="build-02 build-03 gitlab"
 
 ## 下载镜像
 function GetImages(){

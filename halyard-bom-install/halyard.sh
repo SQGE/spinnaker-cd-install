@@ -1,8 +1,8 @@
 #!/bin/bash
 
 VERSION="1.19.4"
-DECK_HOST="http://spinnaker.idevops.site"
-GATE_HOST="http://spin-gate.idevops.site"
+DECK_HOST="http://spinnaker.testk8s.com"
+GATE_HOST="http://spin-gate.testk8s.com"
 until hal --ready; do sleep 10 ; done
 
 # 设置Spinnaker版本，--version 指定版本
@@ -10,7 +10,7 @@ hal config version edit --version local:${VERSION} --no-validate
 
 ## Storage 配置基于minio搭建的S3存储
 hal config storage s3 edit \
-        --endpoint http://minio.idevops.site \
+        --endpoint http://minio.devops:9000 \
         --access-key-id AKIAIOSFODNN7EXAMPLE \
         --secret-access-key wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY \
         --bucket spinnaker \
