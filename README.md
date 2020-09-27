@@ -59,7 +59,9 @@ kubectl get pod -n spinnaker
 
 
 最后手动发布。
-
+```
+1.下载资源文件  2.替换.boms目录 3. 更新版本  4. 发布
+```
 ```
 unzip 1.19.14-Image-Script.zip
 cd 1.19.14
